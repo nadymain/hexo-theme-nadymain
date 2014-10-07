@@ -1,0 +1,59 @@
+@import "_variables"
+@import "_base"
+
+.row
+    width: 90%
+    max-width: 1000px
+    margin-left: auto
+    margin-right: auto
+
+.site-header, .site-content
+    margin-bottom: block-60
+    
+body,button,input,select,textarea
+    font-family: sans-serif
+    font-size: 15px
+    color: color-default
+    line-height: 1.5
+
+a
+    color: color-link
+
+a:hover
+    color: color-default
+
+h1
+    font-size: 32px
+
+table thead
+    border-bottom: border-default
+
+table th
+	padding: 12px 15px
+
+table td
+	padding: 10px 15px
+	border-top: border-default
+    font-size: 12px
+    line-height: 1.5
+
+table tr:hover td 
+	background: #f8f8f8
+
+::-moz-selection 
+    background: #eee
+    text-shadow: none
+
+::selection 
+    background: #eee
+    text-shadow: none
+
+#content
+    overflow: hidden
+
+@import "_header"
+@import "_article"
+@import "_archive"
+@import "_footer"
+@import "_syntax"
+@import "_media"

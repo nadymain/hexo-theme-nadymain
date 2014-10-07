@@ -1,0 +1,11 @@
+## Header
+menu:
+    Home: /
+    Sitemap: /archives
+
+
+## Source
+favicon: /img/fav.png
+# favicon: /hexo-theme-nadymain/img/fav.png # subdomain
+css: /css/main.css
+# css: /hexo-theme-nadymain/css/main.css # subdomain

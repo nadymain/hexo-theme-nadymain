@@ -1,0 +1,32 @@
+<div class="row content-archive">
+    
+    <h2 class="archive-title">Blog</h2>
+    
+    <ul class="archive-post">
+        
+        <% page.posts.each(function(article){ %>
+        
+            <li>
+                
+                <p class="archive-date"><a href="<%- url_for(article.path) %>"><%= date(article.date) %></a></p>
+                
+                <% if (article.link) { %>
+        
+                <h3 class="title-link">
+                    <a href="<%- url_for(article.link) %>" title="<%= article.link %>" target="_blank"><%= article.title %></a>
+                </h3>
+        
+                <% } else if (article.title) { %>
+                
+                <h3><a href="<%- url_for(article.path) %>"><%= article.title %></a></h3>
+                <% } %>
+                
+            </li>
+        
+        <% }) %>
+        
+    </ul>
+
+    <%- partial('_partial/nav-archive') %>
+    
+</div>

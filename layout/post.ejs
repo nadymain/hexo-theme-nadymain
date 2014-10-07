@@ -1,0 +1,77 @@
+<div class="row content-post">
+    <article>
+                
+        <% page.photos.forEach(function(photo){ %>
+            <div class="photos">
+                <img src="<%- url_for(photo) %>" alt="<%= page.title %>">
+            </div>
+        <% }) %>
+        
+        <% if (page.video){ %>
+            <div class="video-container">
+                <iframe src="//www.youtube.com/embed/<%= page.video %>" frameborder="0" allowfullscreen></iframe>
+            </div>
+        <% } %> 
+
+        <p class="content-meta">
+            <%= date(page.date) %> 
+            
+            <% if (page.categories && page.categories.length){ %>
+              <span class="meta-cat">
+                <%- list_categories(page.categories, {
+                  show_count: false,
+                  style: 'none',
+                  separator: ', '
+                }) %>
+              </span>
+            <% } %>
+        </p>
+        
+        <% if (page.link) { %>
+        
+            <h2 class="content-title">
+                <a href="<%- url_for(page.link) %>" target="_blank"><%= page.title %></a>
+            </h2>
+        
+        <% } else if (page.title) { %>
+        
+            <h2 class="content-title">
+                <a href="<%- url_for(page.path) %>"><%= page.title %></a>
+            </h2>
+        
+        <% } %>
+        
+
+        <div class="content">
+            <%- page.content %>
+        </div>
+        
+        <% if (page.tags && page.tags.length) { %> 
+
+            <div class="content-tag">
+                
+                 <%- list_tags(page.tags, {
+                    show_count: false,
+                    style: 'none',
+                    separator: ', '
+                }) %> 
+                
+            </div>
+        
+        <% } %> 
+
+    </article>
+    
+    <div class="content-nav">
+
+        <% if (page.prev){ %>
+            <a href="<%- url_for(config.root + page.prev.path) %>" title="<%-page.prev.title %>">&larr; Prev</a>
+        <% } %>
+
+        <% if (page.next){ %>
+            <a href="<%- url_for(config.root + page.next.path) %>" title="<%-page.next.title %>">Next &rarr;</a>
+        <% } %>
+
+    </div>
+
+</div>

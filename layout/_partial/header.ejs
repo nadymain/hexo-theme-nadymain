@@ -1,0 +1,23 @@
+<header class="site-header">
+    
+    <%- partial('_partial/nav-page') %>
+    
+    <div class="site-header-main">
+    
+        <div class="row">
+
+            <h1><a href="<%- url_for() %>"><%= config.title %></a></h1>
+
+            <% if (theme.subtitle) { %>
+
+                <p><%= theme.subtitle %></p>
+
+            <% } %>
+
+        </div>
+        
+    </div>
+    
+    <%- partial('_partial/nav-cat') %>
+    
+</header>

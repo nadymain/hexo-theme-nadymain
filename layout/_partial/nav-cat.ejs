@@ -1,0 +1,16 @@
+<% if (list_categories()) { %> 
+
+<nav class="nav-cat">
+
+	<div class="row">
+
+		<%- list_categories({
+		    show_count: false,
+            separator: ''
+		}) %>
+		
+	</div>
+
+</nav>
+
+<% } %> 

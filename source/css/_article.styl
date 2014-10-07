@@ -1,0 +1,105 @@
+article p, article h2, article h3, article h4, article table, article ol, article ul, article iframe, article dl
+    margin-bottom: block-40
+
+blockquote
+    font-style: italic
+    font-size: 24px
+    font-family: serif
+    line-height: 1.2
+
+    footer
+        font-size: 14px
+        font-family: sans-serif
+        margin-bottom: block-20
+        position: relative
+        top: -20px
+
+        cite
+            &:before
+              content: "—"
+              padding: 0 0.5em
+
+article li ol, article li ul
+    margin-bottom: 0
+
+.photos
+    margin-bottom: block-40
+
+.content-meta 
+    margin-bottom: block-60
+    padding-bottom: block-10
+   	font-size: 10px
+   	border-bottom: border-default
+   	text-align: right
+   	letter-spacing: 2px
+   	text-transform: uppercase
+
+    span:before
+        content: "\2022"
+
+.content-title
+    margin-bottom: block-40
+    font-size: 28px
+    letter-spacing: 1px
+
+.content 
+    overflow: hidden
+    border-bottom: border-default
+    padding-bottom: block-20
+    margin-bottom: block-10
+
+    h2 
+        font-size: 24px
+        letter-spacing: 2px
+        padding-top: block-40
+
+    h3
+        text-transform: uppercase
+        border-bottom: border-default
+        padding-bottom: 5px
+        font-size: 18px
+        letter-spacing: 2px
+        padding-top: block-10
+
+    h4
+        text-transform: uppercase
+        letter-spacing: 2px
+        padding-top: block-10
+
+    .pullquote
+        text-align: left
+        width: 45%
+        margin: 0
+
+        &.left
+            margin-left: 0.5em
+            margin-right: 1em
+            float:left
+
+        &.right
+            margin-right: 0.5em
+            margin-left: 1em
+            float:right
+
+.content-tag
+   	font-size: 10px
+   	text-align: right
+   	letter-spacing: 2px
+   	text-transform: uppercase
+    
+    &:before
+        content: "Tags: "
+
+.content-nav
+    letter-spacing: 2px
+   	text-transform: uppercase
+    font-size: 10px
+    text-align: right
+    margin-top: block-60
+    
+    a
+        color: color-default
+        text-align: right
+
+    a:hover
+        color: color-link
