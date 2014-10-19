@@ -50,7 +50,7 @@
                     <a href="<%- url_for(article.link) %>" title="<%= article.link %>" target="_blank"><%= article.title %></a>
                 </h3>
         
-                <% } else if (article.title) { %>
+                <% } else { %>
                 
                 <h3><a href="<%- url_for(article.path) %>"><%= article.title %></a></h3>
                 <% } %>
